@@ -44,7 +44,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quantidade no Lote" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAa-4m-1uG">
-                                <rect key="frame" x="19" y="509" width="150" height="21"/>
+                                <rect key="frame" x="16" y="522" width="150" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -69,8 +69,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="cn3-7u-jyC">
-                                <rect key="frame" x="193" y="503" width="94" height="32"/>
+                                <rect key="frame" x="248" y="516" width="94" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="mudarValorStepper:" destination="BYZ-38-t0r" eventType="valueChanged" id="FB9-2d-RT6"/>
+                                </connections>
                             </stepper>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eND-7U-ht5">
                                 <rect key="frame" x="74" y="175" width="268" height="34"/>
@@ -127,15 +130,36 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Cadastrar"/>
+                                <connections>
+                                    <action selector="btnCadastrar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bvd-aI-gRP"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jtd-A3-6zo">
+                                <rect key="frame" x="203" y="522" width="11" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.7326231274209829" green="0.86991139165102394" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="lblCidade" destination="LZV-ys-2Dt" id="oew-TC-DiJ"/>
+                        <outlet property="lblCpf" destination="G8l-WX-40d" id="Eg8-4s-mE7"/>
+                        <outlet property="lblNicho" destination="8xu-87-Czh" id="TFI-bp-z5m"/>
+                        <outlet property="lblNome" destination="eND-7U-ht5" id="z3Q-Hu-R8L"/>
+                        <outlet property="lblOrganica" destination="Jmk-Gp-jIO" id="HEg-7f-udh"/>
+                        <outlet property="lblProduto" destination="2qB-qE-IfZ" id="CjL-FO-Pc0"/>
+                        <outlet property="lblQuantidade" destination="cn3-7u-jyC" id="uGw-fd-aZj"/>
+                        <outlet property="lblQuantidadeStepper" destination="jtd-A3-6zo" id="oOC-U3-h7D"/>
+                        <outlet property="lblValor" destination="0c9-ml-fMx" id="CeQ-A7-G7r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-434.35114503816794" y="-78.16901408450704"/>
+            <point key="canvasLocation" x="-1427" y="-952"/>
         </scene>
     </scenes>
 </document>

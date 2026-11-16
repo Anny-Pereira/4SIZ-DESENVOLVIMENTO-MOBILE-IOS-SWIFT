@@ -43,9 +43,8 @@ class Produtor {
    
     
     func cadastrarLoteProdutor(prod: Produtor)-> String{
-        var produtor = Produtor(nomeProdutor: prod.nomeProdutor, documento: prod.documento, cidade: prod.cidade, nichoProd: prod.nichoProd, nomeProduto: prod.nomeProduto, valorUnitario: prod.valorUnitario, quantidadeLote: prod.quantidadeLote, producaoOrganica: prod.producaoOrganica)
         
-        return "Cadastro realizado com sucesso :)"
+        return "Valor total do Lote: R$ \(calcularValorLote())"
     }
     
     func calcularValorLote()->Double{
